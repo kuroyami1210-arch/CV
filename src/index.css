@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Base ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-white font-sans overflow-x-hidden antialiased;
+}
+
+/* ---- Background pattern (not in Tailwind) ---- */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 70px 70px;
+}
+
+/* ---- Hero outline text (text-stroke not in Tailwind) ---- */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.45);
+}
+
+.text-outline-num {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.22);
+}
+
+/* ---- Spotlight photo (mask + CSS var --x/--y/--radius, not in Tailwind) ---- */
+.photo-color {
+  -webkit-mask-image: radial-gradient(
+    circle var(--radius, 0px) at var(--x, 50%) var(--y, 50%),
+    black 35%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    circle var(--radius, 0px) at var(--x, 50%) var(--y, 50%),
+    black 35%,
+    transparent 100%
+  );
+}
+
+/* ---- Slider edge fade (mask-image) ---- */
+.slider-fade {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+/* ---- Reveal on scroll: smooth every time it enters a section ---- */
+/* NOTE: uses `translate`/`scale` properties (not `transform`) so it does not
+   override Tailwind translates like -translate-x-1/2 and hover:-translate-y-1 */
+.reveal-section,
+.reveal-project,
+.reveal-child,
+.reveal-left,
+.reveal-right,
+.reveal-zoom,
+.reveal-fade {
+  opacity: 0;
+  will-change: opacity, translate, scale, filter;
+  /* Expo-out easing + slightly longer duration = buttery motion */
+  /* `transform` is also transitioned so Tailwind hovers (hover:-translate/scale) stay smooth */
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    translate 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    scale 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Motion direction variants */
+.reveal-section,
+.reveal-child {
+  translate: 0 48px;
+  scale: 0.99;
+  filter: blur(8px);
+}
+
+.reveal-project {
+  translate: 0 56px;
+  scale: 0.97;
+  filter: blur(10px);
+  transition-duration: 1s;
+}
+
+.reveal-left {
+  translate: -56px 0;
+  filter: blur(6px);
+}
+
+.reveal-right {
+  translate: 56px 0;
+  filter: blur(6px);
+}
+
+.reveal-zoom {
+  translate: 0 20px;
+  scale: 0.92;
+  filter: blur(8px);
+}
+
+/* Fade only (no motion) — safe for elements already using
+   Tailwind translates like the centered hero title */
+.reveal-fade {
+  translate: 0 0;
+  scale: 1;
+  filter: blur(8px);
+}
+
+/* Visible state */
+.reveal-section.is-visible,
+.reveal-project.is-visible,
+.reveal-child.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-zoom.is-visible,
+.reveal-fade.is-visible {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+  filter: blur(0);
+}
+
+/* Automatic stagger for children inside a visible section */
+.reveal-section.is-visible .reveal-child:nth-child(1) { transition-delay: 0.05s; }
+.reveal-section.is-visible .reveal-child:nth-child(2) { transition-delay: 0.15s; }
+.reveal-section.is-visible .reveal-child:nth-child(3) { transition-delay: 0.25s; }
+.reveal-section.is-visible .reveal-child:nth-child(4) { transition-delay: 0.35s; }
+
+/* Manual delay via helper classes (can be combined with data-delay) */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.45s; }
+
+/* Respect users who reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-section,
+  .reveal-project,
+  .reveal-child,
+  .reveal-left,
+  .reveal-right,
+  .reveal-zoom,
+  .reveal-fade {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+    filter: none;
+    transition: none;
+  }
+}
+
+/* ---- Animations not in Tailwind ---- */
+@keyframes slideTrack {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes slideTrackReverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes rotateText {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-slide {
+  animation: slideTrack 28s linear infinite;
+}
+
+.animate-slide-reverse {
+  animation: slideTrackReverse 32s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: rotateText 15s linear infinite;
+}
+
+.slider-pause:hover .animate-slide,
+.slider-pause:hover .animate-slide-reverse {
+  animation-play-state: paused;
+}
