@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section id="contact" className="reveal-section border-t border-white/5 bg-[#151515] px-6 py-[120px] text-center lg:px-[60px] max-lg:py-20">
+    <section id="contact" className="reveal-section border-t border-white/5 bg-[#151515] px-6 py-[120px] text-center lg:px-[60px] max-lg:pb-[280px] max-lg:pt-20">
       <div className="reveal-zoom mx-auto max-w-[700px]" data-delay="100">
         <span className="mb-2 block text-[0.8rem] font-extrabold tracking-[2px] text-accent">
           GET IN TOUCH

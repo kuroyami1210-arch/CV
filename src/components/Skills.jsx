@@ -64,18 +64,21 @@ export default function Skills() {
               name={s.name}
               pct={s.pct}
               icon={
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-[7px]">
-                  <img
-                    src={s.img}
-                    alt={s.name}
-                    className={`block h-[26px] w-[26px] object-contain ${s.rounded ? 'rounded-md' : ''}`}
-                    onError={(e) => {
-                      if (s.fallback && e.currentTarget.src !== s.fallback) {
-                        e.currentTarget.src = s.fallback
-                      }
-                    }}
-                  />
-                </span>
+                s.badge ? (
+                  <span
+                    className={`inline-flex h-8 w-8 items-center justify-center rounded-[7px] text-[1.1rem] font-extrabold text-white ${s.badge}`}
+                  >
+                    {s.initial}
+                  </span>
+                ) : (
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-[7px]">
+                    <img
+                      src={s.img}
+                      alt={s.name}
+                      className={`block h-[26px] w-[26px] object-contain ${s.rounded ? 'rounded-md' : ''}`}
+                    />
+                  </span>
+                )
               }
             />
           ))}

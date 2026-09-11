@@ -27,17 +27,16 @@ export const softSkills = [
     pct: 90,
   },
   {
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeVUEKHKUjTpedl6xl1xChKEKeFaWp0ij074-ijJRDQA&s=10',
+    initial: 'C',
+    badge: 'bg-[#00c4cc]',
     name: 'Canva Design',
     pct: 82,
   },
   {
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKC_LwLIcKl3bDB0fDgMpiid6yJkPm62qHIiXcfjXpNA&s=10',
-    fallback:
-      'https://cdn.iconscout.com/icon/free/png-256/free-alight-motion-logo-icon-download-in-svg-png-gif-file-formats--multimedia-video-audio-brand-pack-logos-icons-8671607.png',
+    initial: 'A',
+    badge: 'bg-[#22c55e]',
     name: 'Alight Motion',
     pct: 76,
-    rounded: true,
   },
   {
     img: 'https://upload.wikimedia.org/wikipedia/commons/0/0c/Capcut-icon.png',

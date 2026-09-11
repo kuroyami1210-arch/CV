@@ -33,7 +33,7 @@ export default function Hero() {
       className="reveal-section relative z-40 flex h-screen min-h-[720px] items-end justify-center overflow-visible border-b border-white/[0.08] max-lg:h-auto max-lg:min-h-0 max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:pb-0 max-lg:pt-[76px]"
     >
       {/* Back title */}
-      <div data-delay="50" className="reveal-fade pointer-events-none absolute left-1/2 top-[calc(60%_+_70px)] z-[2] w-full -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap text-center font-display text-[clamp(3.2rem,7.8vw,7.8rem)] font-black uppercase leading-[0.95] tracking-tight text-white max-lg:top-[calc(60%_+_120px)] max-lg:text-[clamp(2.24rem,5.46vw,5.46rem)]">
+      <div data-delay="50" className="reveal-fade pointer-events-none absolute left-1/2 top-[calc(60%_+_70px)] z-[2] w-full -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap text-center font-display text-[clamp(3.2rem,7.8vw,7.8rem)] font-black uppercase leading-[0.95] tracking-tight text-white max-lg:top-[calc(60%_+_50px)] max-lg:text-[clamp(2.24rem,5.46vw,5.46rem)]">
         I&apos;M A UI/UX
         <br />
         DESIGNER
@@ -73,7 +73,7 @@ export default function Hero() {
       </div>
 
       {/* Front outline title */}
-      <div data-delay="250" className="reveal-fade text-outline pointer-events-none absolute left-1/2 top-[calc(60%_+_70px)] z-[6] w-full -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap text-center font-display text-[clamp(3.2rem,7.8vw,7.8rem)] font-black uppercase leading-[0.95] tracking-tight max-lg:top-[calc(60%_+_120px)] max-lg:text-[clamp(2.24rem,5.46vw,5.46rem)]">
+      <div data-delay="250" className="reveal-fade text-outline pointer-events-none absolute left-1/2 top-[calc(60%_+_70px)] z-[6] w-full -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap text-center font-display text-[clamp(3.2rem,7.8vw,7.8rem)] font-black uppercase leading-[0.95] tracking-tight max-lg:top-[calc(60%_+_50px)] max-lg:text-[clamp(2.24rem,5.46vw,5.46rem)]">
         I&apos;M A UI/UX
         <br />
         DESIGNER
@@ -84,7 +84,7 @@ export default function Hero() {
         aria-label="Scroll Down"
         onClick={scrollToAbout}
         data-delay="400"
-        className="reveal-fade absolute -bottom-[63px] left-1/2 z-50 flex h-[126px] w-[126px] -translate-x-1/2 items-center justify-center rounded-full bg-[#242424] shadow-[0_12px_35px_rgba(0,0,0,0.7)] transition-transform hover:scale-105 max-lg:-bottom-[48px] max-lg:h-[96px] max-lg:w-[96px]"
+        className="reveal-fade absolute -bottom-[63px] left-1/2 z-50 flex h-[126px] w-[126px] -translate-x-1/2 items-center justify-center rounded-full bg-[#242424] shadow-[0_12px_35px_rgba(0,0,0,0.7)] transition-transform hover:scale-105 max-lg:-bottom-[48px] max-lg:h-[96px] max-lg:w-[96px] max-lg:hidden"
       >
         <svg className="animate-spin-slow absolute h-full w-full" viewBox="0 0 100 100">
           <path id="circlePath" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="none" />
