@@ -47,30 +47,30 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="reveal-section relative z-20 border-b border-white/5 bg-coal px-6 pb-[110px] pt-40 lg:px-[60px]">
-      <div className="grid mx-auto max-w-[1240px] items-center gap-11 lg:grid-cols-[1.15fr_1fr] lg:gap-[70px]">
-        <div className="reveal-left" data-delay="100">
-          <span className="mb-2 inline-block text-[1.15rem] font-extrabold tracking-[2px] text-[#6a6a6a]">
+    <section id="about" className="reveal-section relative z-20 border-b border-white/5 bg-coal px-6 pb-[110px] pt-40 lg:px-[60px] max-lg:px-5 max-lg:pb-16 max-lg:pt-28">
+      <div className="grid mx-auto max-w-[1240px] items-center gap-11 lg:grid-cols-[1.15fr_1fr] lg:gap-[70px] max-lg:gap-10">
+        <div className="reveal-left max-lg:text-center" data-delay="100">
+          <span className="mb-2 inline-block text-[1.15rem] font-extrabold tracking-[2px] text-[#6a6a6a] max-lg:text-[1rem]">
             HELLO
           </span>
-          <h2 className="mb-6 font-display text-[clamp(2.8rem,5vw,4.4rem)] font-black leading-[1.05] tracking-tight">
+          <h2 className="mb-6 font-display text-[clamp(2.8rem,5vw,4.4rem)] font-black leading-[1.05] tracking-tight max-lg:mb-5 max-lg:text-[clamp(2rem,9vw,3rem)]">
             I&apos;M FIKRI
           </h2>
-          <p className="mb-9 max-w-[520px] text-[1.02rem] leading-[1.85] text-[#a0a0a0]">
+          <p className="mb-9 max-w-[520px] text-[1.02rem] leading-[1.85] text-[#a0a0a0] max-lg:mx-auto max-lg:mb-8 max-lg:text-[0.95rem] max-lg:leading-[1.8]">
           A Software Engineering student at SMKN 1 Dukuhturi, Tegal. I have a deep passion for software development, UI/UX design, web technologies, and IoT. With hands-on experience in creative projects and technology leadership, I am committed to continuous learning and contributing to the digital world.
           </p>
-          <div className="flex flex-wrap items-center gap-5">
+          <div className="flex flex-wrap items-center gap-5 max-lg:justify-center">
             <a
               href="#projects"
-              className="rounded bg-accent px-7 py-3 text-[0.85rem] font-bold tracking-[0.8px] text-white transition-colors hover:bg-[#e05300]"
+              className="rounded bg-accent px-7 py-3 text-[0.85rem] font-bold tracking-[0.8px] text-white transition-colors hover:bg-[#e05300] max-lg:w-full max-lg:py-3.5 max-lg:text-center"
             >
               EXPLORE MY WORKS
             </a>
-   
+    
           </div>
         </div>
 
-        <div className="reveal-right relative flex items-center justify-center py-5" data-delay="220">
+        <div className="reveal-right relative flex items-center justify-center py-5 max-lg:hidden" data-delay="220">
           <div
             ref={boxRef}
             onMouseMove={handleMouseMove}

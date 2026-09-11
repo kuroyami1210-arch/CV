@@ -11,6 +11,25 @@ body {
   @apply bg-ink text-white font-sans overflow-x-hidden antialiased;
 }
 
+/* ---- Kunci scroll menyamping di HP (di html + body agar mempan di Safari HP).
+   Laptop tidak berubah secara visual karena tidak ada overflow horizontal di sana. ---- */
+html,
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+/* ---- HP: kecilkan jarak geser animasi reveal agar tidak menyembul keluar layar ---- */
+@media (max-width: 1023.5px) {
+  .reveal-left {
+    translate: -24px 0;
+  }
+
+  .reveal-right {
+    translate: 24px 0;
+  }
+}
+
 /* ---- Background pattern (not in Tailwind) ---- */
 .bg-grid {
   background-image:

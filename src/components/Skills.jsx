@@ -42,7 +42,7 @@ export default function Skills() {
         <span className="mb-2 block text-[0.8rem] font-bold tracking-[2px] text-accent">
           DEVELOPMENT & DESIGN
         </span>
-        <h3 className="font-display text-[clamp(1.9rem,4.2vw,2.9rem)] font-black tracking-tight">
+        <h3 className="font-display text-[clamp(1.9rem,4.2vw,2.9rem)] font-black tracking-tight max-lg:text-[clamp(1.5rem,7vw,2rem)]">
           CORE SKILLS & PROFICIENCY
         </h3>
       </div>

@@ -10,7 +10,7 @@ export default function Experience() {
         <span className="text-[0.8rem] font-bold tracking-[2px] text-accent">
           TRACK RECORD & JOURNEY
         </span>
-        <h3 className="mt-2 font-display text-[clamp(2.2rem,4vw,3rem)] font-extrabold tracking-tight text-white">
+        <h3 className="mt-2 font-display text-[clamp(2.2rem,4vw,3rem)] font-extrabold tracking-tight text-white max-lg:text-[clamp(1.4rem,6.5vw,1.9rem)]">
           EXPERIENCE <span className="text-accent">&</span> ACHIEVEMENTS
         </h3>
         <div className="mx-auto mt-4 h-[3px] w-16 rounded-full bg-accent" />
