@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { ABOUT_PHOTO } from '../data/portfolio'
 
 const MAX_PUSH_ANGLE = 14
@@ -8,7 +8,6 @@ export default function About() {
   const boxRef = useRef(null)
   const colorRef = useRef(null)
   const glareRef = useRef(null)
-  const [expanded, setExpanded] = useState(false)
 
   const handleMouseMove = (e) => {
     const box = boxRef.current
@@ -57,21 +56,9 @@ export default function About() {
           <h2 className="mb-6 font-display text-[clamp(2.8rem,5vw,4.4rem)] font-black leading-[1.05] tracking-tight max-lg:mb-5 max-lg:text-[clamp(2rem,9vw,3rem)]">
             I&apos;M FIKRI
           </h2>
-          <p
-            className={`mb-9 max-w-[520px] text-[1.02rem] leading-[1.85] text-[#a0a0a0] max-lg:mx-auto max-lg:mb-8 max-lg:text-[0.95rem] max-lg:leading-[1.8] ${
-              expanded ? '' : 'max-lg:line-clamp-3'
-            }`}
-          >
+          <p className="mb-9 max-w-[520px] text-[1.02rem] leading-[1.85] text-[#a0a0a0] max-lg:mx-auto max-lg:mb-8 max-lg:text-[0.95rem] max-lg:leading-[1.8]">
           A Software Engineering student at SMKN 1 Dukuhturi, Tegal. I have a deep passion for software development, UI/UX design, web technologies, and IoT. With hands-on experience in creative projects and technology leadership, I am committed to continuous learning and contributing to the digital world.
           </p>
-          <button
-            type="button"
-            onClick={() => setExpanded((v) => !v)}
-            aria-expanded={expanded}
-            className="mb-8 text-[0.85rem] font-bold tracking-[0.8px] text-accentLight transition-colors hover:text-accent lg:hidden"
-          >
-            {expanded ? 'TUTUP ▲' : 'SELENGKAPNYA ▼'}
-          </button>
           <div className="flex flex-wrap items-center gap-5 max-lg:justify-center">
             <a
               href="#projects"

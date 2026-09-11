@@ -203,9 +203,8 @@ export default function Projects() {
                   { src: 'assets/pilketos/1.jpeg', alt: 'Pilketos Student Authentication' },
                   { src: 'assets/pilketos/3.jpeg', alt: 'Pilketos Teacher & Staff Authentication' },
                 ].map((f) => (
-                  <div key={f.alt} className="relative h-[200px] w-[102px] shrink-0 overflow-hidden rounded-[18px] border-2 border-[#36363d] bg-[#0d0d10] shadow-[0_10px_25px_rgba(0,0,0,0.7)] max-lg:h-[145px] max-lg:w-[74px] max-sm:h-[118px] max-sm:w-[60px]">
-                    <div className="absolute left-1/2 top-[5px] z-[3] h-[3.5px] w-[26px] -translate-x-1/2 rounded bg-[#25252b]" />
-                    <img src={f.src} alt={f.alt} className="block h-full w-full object-cover object-top" />
+                  <div key={f.alt} className="h-[200px] w-[102px] shrink-0 overflow-hidden rounded-xl border-[1.5px] border-white/[0.12] bg-[#17171a] shadow-[0_10px_25px_rgba(0,0,0,0.65)] max-lg:h-[145px] max-lg:w-[74px] max-sm:h-[118px] max-sm:w-[60px]">
+                    <img src={f.src} alt={f.alt} className="block h-full w-full object-cover" />
                   </div>
                 ))}
               </div>
@@ -237,7 +236,7 @@ export default function Projects() {
         {/* DUTA */}
         <ProjectCard reverse delay={120}>
           <div className="flex flex-col items-start gap-3 max-lg:order-2">
-            <Badge kind="Responsive Web" color="badge-purple" />
+            <Badge kind="UI/UX Design" color="badge-purple" />
             <h4 className="font-display text-[clamp(1.4rem,2.2vw,1.85rem)] font-extrabold leading-tight text-white">
               School Ambassador Registration Web
             </h4>
