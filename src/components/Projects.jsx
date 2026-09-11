@@ -54,7 +54,7 @@ function DeviceShowcase() {
       onMouseLeave={handleMouseLeave}
       className="flex h-full w-full items-center justify-center overflow-hidden rounded-[18px] border border-accent/[0.18] bg-gradient-to-[135deg,#1b1716_0%,#121212_100%]"
     >
-      <div className="relative flex -translate-x-[18px] items-center justify-center max-lg:translate-x-0 max-lg:scale-90">
+      <div className="relative flex -translate-x-[18px] items-center justify-center max-lg:translate-x-0 max-lg:scale-[0.7] max-sm:scale-[0.6]">
         <div
           ref={pcRef}
           className="flex h-[200px] w-[320px] flex-col overflow-hidden rounded-[10px] border-[1.5px] border-[#333] bg-[#1a1a1a] shadow-[0_16px_40px_rgba(0,0,0,0.7)] transition-transform"
@@ -126,7 +126,7 @@ export default function Projects() {
               <img
                 src="assets/smezine/Screenshot (198).png"
                 alt="Smezine Gallery Page"
-                className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.03]"
+                className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.03] max-lg:object-contain max-lg:object-center"
               />
               <SlideLabel>SMEZINE GALLERY PAGE</SlideLabel>
             </>
@@ -134,7 +134,7 @@ export default function Projects() {
               <img
                 src="assets/smezine/Screenshot (199).png"
                 alt="Smezine Division and Management Page"
-                className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.03]"
+                className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.03] max-lg:object-contain max-lg:object-center"
               />
               <SlideLabel>DIVISION & MANAGEMENT PAGE</SlideLabel>
             </>
@@ -169,13 +169,13 @@ export default function Projects() {
 
           <ProjectSlider id="carouselRfid" interval={3000}>
             <>
-              <div className="flex h-full w-full items-center justify-center gap-4 px-6 py-[18px]">
+              <div className="flex h-full w-full items-center justify-center gap-4 px-6 py-[18px] max-lg:gap-2 max-lg:px-3">
                 {[
                   { src: 'assets/arduino/depan.jpg', alt: 'RFID Attendance Device Front View' },
                   { src: 'assets/arduino/dalam.png', alt: 'RFID RC522 Sensor Circuit' },
                   { src: 'assets/arduino/belakang.jpg', alt: 'RFID Attendance Device Rear View' },
                 ].map((f) => (
-                  <div key={f.alt} className="h-[200px] w-[102px] shrink-0 overflow-hidden rounded-xl border-[1.5px] border-white/[0.12] bg-[#17171a] shadow-[0_10px_25px_rgba(0,0,0,0.65)]">
+                  <div key={f.alt} className="h-[200px] w-[102px] shrink-0 overflow-hidden rounded-xl border-[1.5px] border-white/[0.12] bg-[#17171a] shadow-[0_10px_25px_rgba(0,0,0,0.65)] max-lg:h-[145px] max-lg:w-[74px] max-sm:h-[118px] max-sm:w-[60px]">
                     <img src={f.src} alt={f.alt} className="block h-full w-full object-cover" />
                   </div>
                 ))}
@@ -186,7 +186,7 @@ export default function Projects() {
               <img
                 src="assets/arduino/panel.png"
                 alt="Digital Attendance Panel Dashboard"
-                className="h-full w-full object-cover object-top"
+                className="h-full w-full object-cover object-top max-lg:object-contain max-lg:object-center"
               />
               <SlideLabel>ATTENDANCE PANEL DASHBOARD</SlideLabel>
             </>
@@ -197,13 +197,13 @@ export default function Projects() {
         <ProjectCard delay={120}>
           <ProjectSlider id="carouselPilketos" interval={3000}>
             <>
-              <div className="flex h-full w-full items-center justify-center gap-4 px-6 py-[18px]">
+              <div className="flex h-full w-full items-center justify-center gap-4 px-6 py-[18px] max-lg:gap-2 max-lg:px-3">
                 {[
                   { src: 'assets/pilketos/2.jpeg', alt: 'Pilketos Home Page' },
                   { src: 'assets/pilketos/1.jpeg', alt: 'Pilketos Student Authentication' },
                   { src: 'assets/pilketos/3.jpeg', alt: 'Pilketos Teacher & Staff Authentication' },
                 ].map((f) => (
-                  <div key={f.alt} className="relative h-[200px] w-[102px] shrink-0 overflow-hidden rounded-[18px] border-2 border-[#36363d] bg-[#0d0d10] shadow-[0_10px_25px_rgba(0,0,0,0.7)]">
+                  <div key={f.alt} className="relative h-[200px] w-[102px] shrink-0 overflow-hidden rounded-[18px] border-2 border-[#36363d] bg-[#0d0d10] shadow-[0_10px_25px_rgba(0,0,0,0.7)] max-lg:h-[145px] max-lg:w-[74px] max-sm:h-[118px] max-sm:w-[60px]">
                     <div className="absolute left-1/2 top-[5px] z-[3] h-[3.5px] w-[26px] -translate-x-1/2 rounded bg-[#25252b]" />
                     <img src={f.src} alt={f.alt} className="block h-full w-full object-cover object-top" />
                   </div>
@@ -215,7 +215,7 @@ export default function Projects() {
               <img
                 src="assets/pilketos/dokumentasi.jpeg"
                 alt="Pilketos E-Voting Event Documentation"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover max-lg:object-contain max-lg:object-center"
               />
               <SlideLabel>PILKETOS EVENT DOCUMENTATION</SlideLabel>
             </>
